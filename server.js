@@ -24,6 +24,7 @@ const port = process.env.PORT || 8800;
 
 // ****** SEND API
 app.post("/send", async (req, res) => {
+  console.log(req.headers.origin);
   try {
     const { name, email, phone, subject, message } = req.body;
     EmailSender({ name, email, phone, subject, message });
