@@ -20,7 +20,7 @@ const Email = (options) => {
 const EmailSender = ({ name, email, phone, subject, message }) => {
   const options = {
     from: `${email}`,
-    to: process.env.SEND_TO,
+    to: "info@hisestech.com",
     subject: `${subject}`,
     html: `
         <div style="width: 100%; background-color: #f3f9ff; padding: 5rem 0">
