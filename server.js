@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use((req, res, next) => {
-  const allowedOrigins = [process.env.CLIENT_URL_DEVELOPMENT, process.env.CLIENT_URL_PRODUCTION];
+  const allowedOrigins = [process.env.CLIENT_URL_DEVELOPMENT, process.env.CLIENT_URL_PRODUCTION, '*'];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);
